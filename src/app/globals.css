@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+  /* --toastify-color-success: #ff5b21; */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans), sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), sans-serif;
+  min-height: 100vh;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Custom sleek scrollbar styles for the application */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+/* Custom size overrides for react-toastify to make them more compact */
+.Toastify__toast-container {
+  --toastify-toast-width: 290px !important;
+}
+
+@media only screen and (max-w: 480px) {
+  .Toastify__toast-container {
+    width: 290px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .Toastify__toast {
+    margin-bottom: 8px !important;
+    border-radius: 8px !important;
+  }
+}
+
+.Toastify__toast {
+  min-height: 42px !important;
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+}
+
+.Toastify__toast-body {
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-right: 18px !important;
+}
+
+.Toastify__close-button {
+  align-self: center !important;
+  flex-shrink: 0 !important;
+}
+
+
+
